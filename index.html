@@ -47,7 +47,7 @@
 
 <div class="login-container">
     <h2>Login</h2>
-    <form action="HOME.html" method="get">
+    <form id="loginForm">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" placeholder="Enter your username" required>
         <label for="password">Password:</label>
@@ -55,6 +55,14 @@
         <input type="submit" value="Login">
     </form>
 </div>
+
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the form from submitting the traditional way
+        window.location.href = 'HOME.html'; // Redirect to HOME.html
+    });
+</script>
+
 
 </body>
 </html>
